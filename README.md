@@ -1,15 +1,9 @@
-<p align="center">
-  <a href="https://material-ui.com/" rel="noopener" target="_blank"><img width="150" src="https://material-ui.com/static/logo.svg" alt="Material-UI logo"></a></p>
-</p>
 
-<h1 align="center">1.2 React Material</h1>
+# Escuela Colombiana de ingenieria Julio Garavito
 
-[![npm](https://img.shields.io/badge/npm-v6.13.4-red.svg)](https://www.npmjs.com/)
-[![npx](https://img.shields.io/badge/dependencies-npx-orange)](https://www.npmjs.com/package/npx)
-[![material](https://img.shields.io/badge/dependencies-material--ui-yellow)](https://material-ui.com/)
-[![react-router](https://img.shields.io/badge/dependencies-react--router-blue)](https://reacttraining.com/react-router/)
+## IETI-Laboratorio-2 React Material
 
-
+The lab statement is available ![here](https://github.com/ieti-eci/1.2-react-material)
 
 React project using Material-UI library.
 
@@ -26,9 +20,21 @@ Some vulnerabilities may be reported. Ignore them.
 
 ```javascript
 npm install @material-ui/core
+```
+
+![imagen1](img/1.png)
+
+```javascript
 npm install @material-ui/icons
+```
+
+![imagen1](img/2.png)
+
+```javascript
 npm install @material-ui/pickers
 ```
+
+![imagen1](img/3.png)
 
 You can also add the Material-UI dependencies straight into the `package.json` file and re-run the `install` command.
 
@@ -46,6 +52,8 @@ You can also add the Material-UI dependencies straight into the `package.json` f
 }
 
 ```
+
+![imagen1](img/4.png)
 
 3. Under `src`, create a new folder called `components` and add two files named Login.js and Login.css using the following code:
 
