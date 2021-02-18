@@ -250,6 +250,9 @@ localStorage.getItem('key');
   
 1. Use the local storage to store a default user (username and password).
 
+username: edwin@gmail.com
+password: prueba123
+
 2. Add the click handler to Sign In button in order to verify that the user exists (use the one saved on the *localStorage*)
 
 3. Once the user is authenticated successfully then store the *isLoggedIn* on the storage and add the logic to make sure this value is set to state everytime the application is loaded.

@@ -8,11 +8,23 @@ import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {isLoggedIn:false};
+
+        if(localStorage.getItem("isLoggedIn")) {
+            this.state = {isLoggedIn:true};
+            console.log("entro1");
+        } else {
+            this.state = {isLoggedIn:false};
+            console.log("entro2");
+        }
+        localStorage.clear();
+        localStorage.setItem("username","edwin@gmail.com");
+        localStorage.setItem("password", "prueba123");
+        this.log = this.log.bind(this);
     }
     render() {
         const LoginView = () => (
-            <Login/>
+            <Login correct={
+                this.log}/>
         );
         const TodoAppView = () => (
             <TodoApp/>
@@ -29,17 +41,23 @@ class App extends Component {
                     <br/>
 
                     <ul>
-                        <li><Link to="/">Login</Link></li>
-                        <li><Link to="/todo">Todo</Link></li>
+                        {!this.state.isLoggedIn && <li><Link to="/">Login</Link></li>}
+                        {this.state.isLoggedIn && <li><Link to="/todo">Todo</Link></li>}
                     </ul>
 
                     <div>
-                        <Route exact path="/" component={LoginView}/>
+                        {!this.state.isLoggedIn && <Route exact path="/" component={LoginView}/>}
                         {this.state.isLoggedIn && <Route path="/todo" component={TodoAppView}/>}
                     </div>
                 </div>
             </Router>
         );
     }
+
+    log(e) {
+        this.setState({isLoggedIn:true});
+        localStorage.setItem("isLoggedIn", true);
+    }
+
 }
 export default App;
